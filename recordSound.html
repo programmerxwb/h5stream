@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="vueapp">
+			<video autoplay ref="preview" width="300" height="200"></video>
+			<div>
+				<button @click="btnRecordClicked">Record</button>
+				<button @click="btnPauseClicked">Pause</button>
+				<button @click="btnResumeClicked">Resume</button>
+				<button @click="btnStopClicked">Stop</button>
+				<button :disabled="!currentWebmDate" @click="btnPlayClicked">Play</button>
+			</div>
+			<video controls ref="player"></video>
+		</div>
+		<script src="js/vue.js"></script>
+		<script src="js/recordSound.js"></script>
+	</body>
+</html>
